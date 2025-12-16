@@ -5,26 +5,26 @@ GitHubの「Template repository」機能を使って、この構成から素早�
 
 ## 🚀 特徴 (Tech Stack)
 
-* **Core:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-* **Build Tool:** [Vite](https://vitejs.dev/) (高速ビルド)
-* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (CSS-first configuration, Zero-runtime)
-* **Package Manager:** [pnpm](https://pnpm.io/)
-* **Linting & Formatting:**
-    * [ESLint](https://eslint.org/) (Flat Config)
-    * [Prettier](https://prettier.io/)
-    * `prettier-plugin-tailwindcss` (クラス名の自動ソート)
-* **Git Hooks:** [Husky](https://typicode.github.io/husky/) + [lint-staged](https://github.com/okonet/lint-staged) (コミット時の自動チェック)
-* **Configuration:**
-    * Path Alias 設定済み (`@/` = `src/`)
+- **Core:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/) (高速ビルド)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) (CSS-first configuration, Zero-runtime)
+- **Package Manager:** [pnpm](https://pnpm.io/)
+- **Linting & Formatting:**
+  - [ESLint](https://eslint.org/) (Flat Config)
+  - [Prettier](https://prettier.io/)
+  - `prettier-plugin-tailwindcss` (クラス名の自動ソート)
+- **Configuration:**
+  - Path Alias 設定済み (`@/` = `src/`)
 
 ## 🛠️ 必須要件
 
-* Node.js (LTS推奨)
-* pnpm
+- Node.js (LTS推奨)
+- pnpm
 
 ## 📦 プロジェクトの始め方
 
 ### 1. このテンプレートからプロジェクトを作成
+
 GitHubリポジトリ右上の **"Use this template"** ボタンをクリックし、**"Create a new repository"** を選択して新しいリポジトリを作成してください。
 
 ### 2. クローンとセットアップ
@@ -55,17 +55,18 @@ pnpm install
 ```bash
 pnpm dev
 ```
+
 ブラウザで `http://localhost:5173` を開いて確認します。
 
 ## 📜 利用可能なスクリプト
 
-| コマンド | 説明 |
-| --- | --- |
-| `pnpm dev` | 開発サーバーを起動します (HMR有効) |
-| `pnpm build` | 本番用にビルドします |
+| コマンド       | 説明                                         |
+| -------------- | -------------------------------------------- |
+| `pnpm dev`     | 開発サーバーを起動します (HMR有効)           |
+| `pnpm build`   | 本番用にビルドします                         |
 | `pnpm preview` | ビルドした成果物をローカルでプレビューします |
-| `pnpm lint` | ESLintを実行してコードの問題をチェックします |
-| `pnpm format` | Prettierを実行してコードを整形します |
+| `pnpm lint`    | ESLintを実行してコードの問題をチェックします |
+| `pnpm format`  | Prettierを実行してコードを整形します         |
 
 ※ コミット時 (`git commit`) に、変更されたファイルに対して自動的に `lint` と `format` が実行されます。エラーがある場合、コミットは中断されます。
 
@@ -73,7 +74,6 @@ pnpm dev
 
 ```text
 .
-├── .husky/              # Git Hooks設定
 ├── public/              # 静的アセット
 ├── src/
 │   ├── assets/          # 画像などのアセット
@@ -97,10 +97,10 @@ Tailwind v4では `tailwind.config.js` は不要です。
 CSS変数のカスタマイズなどは `src/index.css` 内で標準的なCSS構文を使って行います。
 
 ```css
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-display: "Satoshi", "sans-serif";
+  --font-display: 'Satoshi', 'sans-serif';
   --breakpoint-3xl: 1920px;
   --color-avocado-100: oklch(0.99 0.03 132.75);
   --color-avocado-500: oklch(0.84 0.18 117.33);
